@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poly&family=Sevillana&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+button, 
+input {
+    font-size: clamp(12px, 3vw, 18px);
+}
+span, 
+p, 
+a, 
+input,
+label, textarea {
+    font-size: clamp(16px, 3vw, 26px);
+    padding: 5px 0px;
+    line-height: 1.3;
+    font-family: 'Sevillana', cursive;
+}
+h1, h2, .tab-heading {
+    font-size: clamp(30px, 6vw, 50px);
+    font-family: 'Poly', serif;
+}
+.tabs-section {
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+}
+.tabs-section .tabs-block {
+    width: 95%;
+    max-width: 1920px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #8e8e8e;
+    position: relative;
+}
+.tabs-section .tabs-block .tabs-buttons {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border-bottom: 2px solid #eeeeee;
+}
+.tabs-section .tabs-block .tabs-buttons .tabs-line {
+    position: absolute;
+    bottom: -3px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: all 0.2s;
+    display: none;
+}
+.tabs-section .tabs-block .tabs-buttons .tab-btn {
+    padding: 15px 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tabs-section .tabs-block .tabs-buttons .tab-btn.active {
+    background-color: #007bff;
+    color: #fff;
+}
+.tabs-section .tabs-block .tabs-buttons .tab-btn.tab-style {
+    background-color: #007bff;
+    border-radius: 10px 10px 0px 0px;
+    color: #fff;
+    margin-right: 2px;
+}
+.tabs-section .tabs-block .tabs-content {
+    width: 100%;
+    height: auto;
+}
+.tabs-section .tabs-block .tabs-content .home-block,
+.tabs-section .tabs-block .tabs-content .about-block,
+.tabs-section .tabs-block .tabs-content .services-block {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 400px;
+}
+.tabs-content .home-block .home-content,
+.tabs-content .about-block .about-content,
+.tabs-content .home-block .image-block, 
+.tabs-content .about-block .image-block {
+    flex: 1;
+    overflow: hidden;
+}
+.tabs-content .home-block .home-content,
+.tabs-content .about-block .about-content  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tabs-content .home-block .home-content h2 {
+    color: #D3528A;
+    padding-bottom: 20px;
+}
+.tabs-content .home-block .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+.tabs-content .about-block .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card {
+    flex: 1 0 25%;
+    min-height: 400px;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card .popup-content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+.tabs-content .services-block .service-card .popup-content h2,
+.tabs-content .services-block .service-card .popup-content p {
+    display: none;
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card:hover .popup-content {
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card:hover .popup-content p,
+.tabs-section .tabs-block .tabs-content .services-block .service-card:hover .popup-content h2 {
+    display: block;
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card:hover img {
+    transform: scale(1.2);
+}
+.tabs-section .tabs-block .tabs-content .services-block .service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition: all 0.3s ease-in-out;
+}
+.tabs-section .tabs-block .tabs-content .text-content {
+    width: 100%;
+    padding: 20px 30px;
+    display: none;
+}
+.tabs-block .tabs-content .text-content.active {
+    display: block;
+    animation: movetab .5s ease-in-out 1 forwards;
+}
+.tabs-content .text-content .form-block {
+    max-width: 768px;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tabs-content .text-content .form-block .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+.tabs-content .text-content .form-block .contact-form input,
+.tabs-content .text-content .form-block .contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8e8e8e;
+}
+.tabs-content .text-content .form-block .contact-form input:focus,
+.tabs-content .text-content .form-block .contact-form textarea:focus {
+    outline: none;
+}
+.tabs-content .text-content .form-block .contact-form input[type='submit'] {
+    background-color: #000000;
+    color: #ffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.tabs-content .text-content .form-block .contact-form input[type='submit']:hover {
+    background-color: #fff;
+    color: #000;
+}
+@keyframes movetab {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@media(max-width: 1024px) {
+    .tabs-section .tabs-block .tabs-content .home-block {
+        flex-direction: column;
+    }
+    .tabs-section .tabs-block .tabs-content .about-block {
+        flex-direction: column-reverse;
+    }
+    .tabs-section .tabs-block .tabs-content .services-block {
+        flex-wrap: wrap;
+    }
+    .tabs-section .tabs-block .tabs-content .services-block .service-card {
+        flex: 1 0 50%;
+    }
+}
+@media(max-width: 768px) {
+    .tabs-section .tabs-block .tabs-content .services-block {
+        flex-wrap: wrap;
+    }
+    .tabs-section .tabs-block .tabs-content .services-block .service-card {
+        flex: 1 0 100%;
+    }
+    .tabs-section .tabs-block .tabs-buttons .tab-btn {
+        padding: 15px 10px;
+    }
+}

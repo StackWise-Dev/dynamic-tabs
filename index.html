@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic | JS Tabs</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section class="tabs-section">
+        <div class="tabs-block" data-tabs-config='{"lineStyle": true, "buttonStyle": false, "tabStyle": false, "tabBgColor": "#007bff"}'>
+            <div class="tabs-buttons">
+                <button class="tab-btn" type="button" data-tabid="0" title="button" role="tab button">Home</button>
+                <button class="tab-btn" type="button" data-tabid="1" title="button" role="tab button">Services</button>
+                <button class="tab-btn" type="button" data-tabid="2" title="button" role="tab button">About</button>
+                <button class="tab-btn" type="button" data-tabid="3" title="button" role="tab button">Contact Us</button>
+                <div class="tabs-line"></div>
+            </div>
+            <div class="tabs-content">
+                <div class="content text-content active">
+                    <div class="home-block">
+                        <div class="home-content">
+                            <h2>Clean & Simple UI Experience</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, mollitia! Eos iusto ipsum atque nisi ut facere sit impedit pariatur! Quibusdam dolor voluptatibus mollitia eius debitis voluptate nostrum inventore magni?</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, mollitia! Eos iusto ipsum atque nisi ut facere sit impedit pariatur! Quibusdam dolor voluptatibus mollitia eius debitis voluptate nostrum inventore magni?</p>
+                        </div>
+                        <div class="image-block">
+                            <img src="./images/home.png" alt="Home Flower Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="content text-content">
+                    <div class="services-block">
+                        <div class="service-card">
+                            <img src="./images/plant.jpg" alt="card image">
+                            <div class="popup-content">
+                                <h2>Gardening</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto eos dicta esse molestias vel ex mollitia, porro laboriosam, dignissimos repudiandae atque aspernatur pariatur reiciendis.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="./images/vegetables.jpg" alt="card image">
+                            <div class="popup-content">
+                                <h2>Vegetables</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto eos dicta esse molestias vel ex mollitia, porro laboriosam, dignissimos repudiandae atque aspernatur pariatur reiciendis.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="./images/flower.jpg" alt="card image">
+                            <div class="popup-content">
+                                <h2>Flowers</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto eos dicta esse molestias vel ex mollitia, porro laboriosam, dignissimos repudiandae atque aspernatur pariatur reiciendis.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="./images/fruits.jpg" alt="card image">
+                            <div class="popup-content">
+                                <h2>Fruits</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto eos dicta esse molestias vel ex mollitia, porro laboriosam, dignissimos repudiandae atque aspernatur pariatur reiciendis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content text-content">
+                    <div class="about-block">
+                        <div class="image-block">
+                            <img src="./images/person.png" alt="Home Flower Image">
+                        </div>
+                        <div class="about-content">
+                            <h2>Amad Ali, MERN Stack Dev</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, mollitia! Eos iusto ipsum atque nisi ut facere sit impedit pariatur! Quibusdam dolor voluptatibus mollitia eius debitis voluptate nostrum inventore magni?</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, mollitia! Eos iusto ipsum atque nisi ut facere sit impedit pariatur! Quibusdam dolor voluptatibus mollitia eius debitis voluptate nostrum inventore magni?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content text-content">
+                    <div class="form-block">
+                        <h2 class="heading">Contact Us</h2>
+                        <form class="contact-form">
+                            <input type="text" name="username" id="username" placeholder="Username e.g John Doe">
+                            <input type="email" name="email" id="email" placeholder="Email e.g johndoe@gmail.com">
+                            <textarea name="message" id="msgarea" cols="30" rows="10" placeholder="Enter you Message..."></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
